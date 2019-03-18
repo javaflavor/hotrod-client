@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{yyy/MM/dd HH:mm:ss.SSS} %-5level [%c] (%t) %msg%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="com.kddi.stream.chunk.jdg.client.ParallelRemoteCache"
+			level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="com.kddi.stream.chunk.jdg.client.PartitionedCacheSelector"
+			level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		
+		<Root level="info">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
